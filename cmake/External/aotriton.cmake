@@ -13,7 +13,7 @@ if(NOT __AOTRITON_INCLUDED)
     file(STRINGS "${CMAKE_CURRENT_SOURCE_DIR}/.ci/docker/aotriton_version.txt" __AOTRITON_CI_INFO)
     list(GET __AOTRITON_CI_INFO 3 __AOTRITON_CI_COMMIT)
     ExternalProject_Add(aotriton_external
-      GIT_REPOSITORY https://github.com/ROCm/aotriton.git
+      GIT_REPOSITORY https://github.com/riverzhou/aotriton.git
       GIT_TAG ${__AOTRITON_CI_COMMIT}
       SOURCE_DIR ${__AOTRITON_SOURCE_DIR}
       BINARY_DIR ${__AOTRITON_BUILD_DIR}
